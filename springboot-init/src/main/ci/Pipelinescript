@@ -1,0 +1,11 @@
+pipeline {
+    stages {
+        stage('Build JAR') {
+            steps {
+                sh "mvn clean package -B -e -U -DskipTests"
+            }
+        }
+    }
+
+
+}
