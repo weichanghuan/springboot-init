@@ -10,9 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
                         steps {
-                            withDockerRegistry(credentialsId: '2222', url: 'https://hub.docker.com/repository/docker/weichanghuan/springboot-init') {
                                 sh "docker build -f ./springboot-init/src/main/docker/Dockerfile -t weichanghuan/springboot-init:v1 ."
-                            }
                         }
         }
     }
