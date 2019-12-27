@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
                         steps {
                             // 该步骤通常不应该在您的脚本中使用。请参考帮助查看详情。
-                            withDockerRegistry(credentialsId: '68e4b7f1-354b-4a90-9e52-e0945b40560b', url: 'https://hub.docker.com/repository/docker/weichanghuan/springboot-init') {
+                            withDockerRegistry(credentialsId: '11111', url: 'https://hub.docker.com/repository/docker/weichanghuan/springboot-init') {
                                 sh "docker build -f ./springboot-init/src/main/docker/Dockerfile -t weichanghuan/springboot-init:v1 ."
                             }
                         }
