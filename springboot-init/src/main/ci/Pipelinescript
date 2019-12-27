@@ -14,12 +14,7 @@ pipeline {
                                 sh "echo ok"
                         }
         }
-        stage('Push Docker Image') {
-                    steps {
-                            sh "docker push weichanghuan/springboot-init:v1"
-                            sh "echo ok"
-                    }
-                }
+
          stage('Run App') {
                      steps {
                              sh "docker run -itd -p 8080:8080 weichanghuan/springboot-init:v1"
