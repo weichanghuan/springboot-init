@@ -22,7 +22,7 @@ pipeline {
                 }
          stage('Run App') {
                      steps {
-                             sh "docker run -itd -p 8080:8090 weichanghuan/springboot-init:v1"
+                             sh "docker run -itd  weichanghuan/springboot-init:v1"
                              sh "echo ok"
                      }
                  }
