@@ -13,6 +13,11 @@ pipeline {
                                 sh "docker build -f ./springboot-init/src/main/docker/Dockerfile -t weichanghuan/springboot-init:v1 ."
                         }
         }
+        stage('Push Docker Image') {
+                    steps {
+                            sh "docker push weichanghuan/springboot-init:v1"
+                    }
+                }
     }
 
 
