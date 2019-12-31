@@ -24,6 +24,7 @@ public class ApplicationStart {
 
     @GetMapping("/init")
     public String init() {
+        LOGGER.info("接受访问");
         return "ok";
     }
 }
